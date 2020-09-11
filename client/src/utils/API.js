@@ -1,13 +1,12 @@
-import axious from "axios";
 import axios from "axios";
 
 export default {
-    createBook(){
+    createBook(data){
         return axios.post("/api/books", data);
     },
     
-    deleteBook(){
-        return axios.delete(`/api/books/${bookId}`, data);
+    deleteBook(bookId){
+        return axios.delete(`/api/books/${bookId}`);
     },
     getBooks(){
         return axios.get("/api/books");
